@@ -1,12 +1,12 @@
-import org.springframework.stereotype.Service;
+package com.example.demo.service;
+
 import org.springframework.web.client.RestTemplate;
 
-@Service
 public class FipService {
-    private final String API_URL = "https://api.exemplo.com/fip";
+    private final String API_URL = "https://parallelum.com.br/fipe/api/v1/carros/marcas/59/modelos/5940/anos/2014-3";
 
-    public String getFipData() {
+    public String getFipData(){
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(API_URL, String.class);
+        return restTemplate.getForObject(API_URL,String.class );
     }
 }
